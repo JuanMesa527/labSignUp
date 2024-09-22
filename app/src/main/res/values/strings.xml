@@ -9,4 +9,10 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="register">Register</string>
+    <string name="direccion_fisica">Direccion fisica</string>
+    <string-array name="Roles">
+        <item>Ciudadano</item>
+        <item>Planeador</item>
+        <item>Decisor</item>
+    </string-array>
 </resources>

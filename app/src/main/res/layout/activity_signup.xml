@@ -51,6 +51,48 @@
         android:focusableInTouchMode="true"
         android:textColorHint="@color/colorAccent"
         >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="button"
+                android:onClick="ObtenerCoordendasActual"
+                android:backgroundTint="@null"
+                android:background="@drawable/button_rounded"/>
+            <EditText
+                android:id="@+id/edtlatitud"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/direccion_fisica"
+                android:ems="10"
+                android:inputType="text"
+                android:textSize="20sp"
+                />
+            <EditText
+                android:id="@+id/edtlongitud"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/direccion_fisica"
+                android:ems="10"
+                android:inputType="text"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/colorAccent"
+        >
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -94,6 +136,16 @@
             android:textSize="20sp"
             />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:entries="@array/Roles"
+        />
 
     <RadioGroup
         android:layout_width="match_parent"
