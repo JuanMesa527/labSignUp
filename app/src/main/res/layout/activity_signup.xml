@@ -44,47 +44,61 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:textColorHint="@color/colorAccent"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="button"
-                android:onClick="ObtenerCoordendasActual"
-                android:backgroundTint="@null"
-                android:background="@drawable/button_rounded"/>
-            <EditText
-                android:id="@+id/edtlatitud"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/direccion_fisica"
-                android:ems="10"
-                android:inputType="text"
-                android:textSize="20sp"
-                />
-            <EditText
-                android:id="@+id/edtlongitud"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/direccion_fisica"
-                android:ems="10"
-                android:inputType="text"
-                android:textSize="20sp"
-                />
-        </LinearLayout>
-    </com.google.android.material.textfield.TextInputLayout>
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ubicacion_actual"
+            android:onClick="ObtenerCoordendasActual"
+            android:backgroundTint="@null"
+            android:background="@drawable/button_rounded"/>
+        <TextView
+            android:id="@+id/edtlatitud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="@string/latitud"
+            android:inputType="text"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/edtlongitud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="@string/longitud"
+            android:inputType="text"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fecha"
+            android:onClick="openDatePicker"
+            android:backgroundTint="@null"
+            android:background="@drawable/button_rounded"/>
+        <EditText
+            android:id="@+id/TextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ems="10"
+            android:hint="@string/date_field"
+            android:inputType="date"/>
+    </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -115,7 +129,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/enter_password"
             android:ems="10"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:textSize="20sp"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -132,7 +146,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/enter_confirm_password"
             android:ems="10"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:textSize="20sp"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -147,19 +161,19 @@
         android:entries="@array/Roles"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender"
+        android:textSize="20sp"
+        />
+
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/gender"
-            android:textSize="20sp"
-            />
-
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -174,6 +188,14 @@
             android:text="@string/female"
             android:textSize="20sp"
             />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/binario"
+            android:textSize="20sp"
+            />
     </RadioGroup>
 
     <Button
@@ -186,6 +208,5 @@
         android:backgroundTint="@null"
         android:background="@drawable/button_rounded"
         />
-
 
 </LinearLayout>

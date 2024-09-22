@@ -9,7 +9,13 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="register">Register</string>
-    <string name="direccion_fisica">Direccion fisica</string>
+    <string name="latitud">Latitud</string>
+    <string name="longitud">Longitud</string>
+    <string name="ubicacion_actual">Ubicacion</string>
+    <string name="date_field">Fecha de nacimiento</string>
+    <string name="fecha">FECHA</string>
+    <string name="binario">Binary</string>
+    <string name="login">LOGIN</string>
     <string-array name="Roles">
         <item>Ciudadano</item>
         <item>Planeador</item>
